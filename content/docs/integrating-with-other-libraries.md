@@ -249,7 +249,7 @@ ReactDOM.render(
 
 [**Try it on CodePen**](https://codepen.io/gaearon/pen/RVKbvW?editors=1010)
 
-You can have as many such isolated components as you like, and use `ReactDOM.render()` to render them to different DOM containers. Gradually, as you convert more of your app to React, you will be able to combine them into larger components, and move some of the `ReactDOM.render()` calls up the hierarchy.
+You can have as many isolated components as you like, and use `ReactDOM.render()` to render them to different DOM containers. Gradually, as you convert more of your app to React, you will be able to combine them into larger components, and move some of the `ReactDOM.render()` calls up the hierarchy.
 
 ### Embedding React in a Backbone View {#embedding-react-in-a-backbone-view}
 
@@ -373,7 +373,8 @@ function connectToBackboneModel(WrappedComponent) {
     componentDidMount() {
       this.props.model.on('change', this.handleChange);
     }
-
+    
+    //deprecated
     componentWillReceiveProps(nextProps) {
       this.setState(Object.assign({}, nextProps.model.attributes));
       if (nextProps.model !== this.props.model) {
