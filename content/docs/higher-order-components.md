@@ -325,6 +325,8 @@ React's diffing algorithm (called reconciliation) uses component identity to det
 Normally, you shouldn't need to think about this. But it matters for HOCs because it means you can't apply a HOC to a component within the render method of a component:
 
 ```js
+//Provide better example
+
 render() {
   // A new version of EnhancedComponent is created on every render
   // EnhancedComponent1 !== EnhancedComponent2
